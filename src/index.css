@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --kinda-white-color: #eeeeee;
+  --white-color: #ffffff;
+  --dark-color: #1a1a1b;
+  --dim-color: #232324;
+  --hover-color: #2d2d2e;
+  --link-color: #f6df38;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: var(--dark-color);
+  font-family: "Work Sans", sans-serif;
+  display: grid;
+  place-items: center;
+}
+#root {
+  width: 90%;
+  max-width: 600px;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image-container {
+  margin: 0 auto;
+}
+.image-container img {
+  border-radius: 50%;
+  margin: 0 0 0.75em 0;
+}
+a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+p {
+  line-height: 0;
+}
+.profile-link {
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border: 1px solid var(--white-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+.profile-link:hover.profile-link::after {
+  transform: scaleX(1);
+}
+.links-list {
+  margin-top: 1em;
+  width: 100%;
+}
+.link-list-item {
+  margin: 0.75em auto;
+  color: var(--white-color);
+  padding: 1.5em;
+  background: var(--dim-color);
+  border-radius: 12px;
+  border: 1px solid #1b1a290a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 150ms ease-in;
+}
+.link-list-item i {
+  font-size: 1rem;
+}
+.link-list-item:hover {
+  background: var(--hover-color);
+}
+footer p {
+  line-height: normal;
+  color: var(--white-color);
+  margin-top: 1em;
+  font-size: 0.8rem;
+}
+footer a {
+  color: var(--link-color);
 }
