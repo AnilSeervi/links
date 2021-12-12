@@ -1,0 +1,143 @@
+@import "./mixins";
+@import "./animations";
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @media screen {
+    font-size: 1vmin;
+  }
+  height: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+}
+:root {
+  --bg: rgba(255, 255, 255, 1);
+  --primary-clr: hsl(272, 100%, 60%);
+  @media (prefers-color-scheme: dark) {
+    --bg: rgba(0, 0, 0, 1);
+  }
+}
+body {
+  font-family: inherit;
+  line-height: inherit;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--bg);
+  @media screen {
+    overflow: hidden;
+  }
+  // @media print {
+  //   background-color: rgba(255, 255, 255, 1);
+  // }
+}
+#__next,
+main {
+  height: 100%;
+}
+
+nav {
+  border-radius: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  height: 100vmin;
+  width: 100vmin;
+  transform-origin: center;
+  @include transform-gpu {
+    --translate-x: -50%;
+    --translate-y: -50%;
+    --rotate: 0deg;
+  }
+  ul {
+    list-style: none;
+    display: contents;
+  }
+  li {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: right;
+    opacity: 1;
+    transform-origin: left center;
+    width: 45rem;
+    @include transform-gpu {
+      --translate-y: -50%;
+    }
+  }
+}
+.icon-wrapper {
+  display: inline-block;
+  height: 100%;
+  @include transform-gpu;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  width: 15rem;
+  height: 15rem;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding: 4rem;
+  border-radius: 100%;
+  color: var(--primary-clr);
+  pointer-events: auto;
+  transition-property: background-color, border-color, color, fill, stroke;
+  &:hover,
+  &:focus {
+    color: var(--bg);
+    background-color: var(--primary-clr);
+  }
+  @media (prefers-color-scheme: dark) {
+    &:hover,
+    &:focus {
+      color: var(--bg);
+    }
+  }
+}
+
+svg {
+  fill: currentColor;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.logo-wrapper {
+  background-color: var(--primary-clr);
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center;
+  left: 50%;
+  top: 50%;
+  height: 50rem;
+  width: 50rem;
+  @include transform-gpu {
+    --translate-x: -50%;
+    --translate-y: -50%;
+  }
+  display: flex;
+  border-radius: 100%;
+  overflow: hidden;
+  color: #000000;
+  svg {
+    width: 100%;
+  }
+}
+
+#logo {
+  stroke: var(--bg);
+}

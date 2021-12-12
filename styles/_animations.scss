@@ -1,0 +1,40 @@
+@keyframes rotate {
+  to {
+    transform: translate3d(var(--translate-x), var(--translate-y), 0)
+      rotate(360deg) skewX(var(--skew-x)) skewY(var(--skew-y))
+      scaleX(var(--scale-x)) scaleY(var(--scale-y));
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    --rotate-duration: calc(60s * 5);
+  }
+  .rotate-clockwise-animation,
+  .rotate-counterclockwise-animation {
+    animation-duration: var(--rotate-duration);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: rotate;
+    animation-timing-function: linear;
+  }
+  .rotate-counterclockwise-animation {
+    animation-direction: reverse;
+  }
+  #logo {
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    stroke-linecap: round;
+    animation: stroke;
+    animation-timing-function: cubic-bezier(1, -1.55, 0.4, 1.1);
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms;
+  }
+}
