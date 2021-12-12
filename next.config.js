@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // no support for Internationalization in static export yet :(
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
   async rewrites() {
     return [
       {
@@ -11,11 +12,6 @@ module.exports = {
         destination: "/",
       },
     ];
-  },
-  exportPathMap: async function () {
-    return {
-      "/": { page: "/" },
-    };
   },
   reactStrictMode: true,
 };
