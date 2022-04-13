@@ -21,6 +21,7 @@ html {
 :root {
   --bg: rgba(255, 255, 255, 1);
   --primary-clr: hsl(272, 100%, 60%);
+  --play-state: running;
   @media (prefers-color-scheme: dark) {
     --bg: rgba(0, 0, 0, 1);
   }
@@ -58,6 +59,9 @@ nav {
     --translate-x: -50%;
     --translate-y: -50%;
     --rotate: 0deg;
+  }
+  &:hover {
+    --play-state: paused;
   }
   ul {
     list-style: none;

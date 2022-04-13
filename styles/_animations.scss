@@ -23,6 +23,7 @@
     animation-iteration-count: infinite;
     animation-name: rotate;
     animation-timing-function: linear;
+    animation-play-state: var(--play-state);
   }
   .rotate-counterclockwise-animation {
     animation-direction: reverse;
