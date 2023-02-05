@@ -22,7 +22,7 @@ export default function Head() {
       <meta property="og:description" content="Front-End Developer" />
       <meta
         property="og:image"
-        content="https://cumon.pages.dev/assets/og-thumb.png"
+        content="https://cumon.vercel.app/assets/og-thumb.png"
       />
       <meta property="og:image:alt" content="Anil Seervi" />
       <meta property="og:image:height" content="1080" />
@@ -34,7 +34,7 @@ export default function Head() {
       />
       <meta property="og:title" content="Anil Seervi" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://cumon.pages.dev/" />
+      <meta property="og:url" content="https://cumon.vercel.app/" />
     </head>
   );
 }
