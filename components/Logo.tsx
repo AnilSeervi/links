@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <div className="logo-wrapper">
-      <a href="https://an8.me" target="_blank" rel="noreferrer">
+      <a href="https://anil.vercel.app" target="_blank" rel="noreferrer">
         <svg
           viewBox="0 0 280 280"
           fill="none"

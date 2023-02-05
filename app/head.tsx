@@ -1,14 +1,12 @@
-import Head from "next/head";
-
-const SEO = () => {
+export default function Head() {
   return (
-    <Head>
+    <head prefix="og:http//ogp.me/ns#">
       <meta
         name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes"
       />
       <link rel="shortcut icon" href="favicon.svg" type="image/svg" />
-      <title>ANIL SEERVI | Front-End Developer</title>
+      <title>Anil Seervi | Front-End Developer</title>
       <meta
         name="description"
         content="Anil Seervi is a Front-End Developer from India. This website contains social links of his accounts in other platform."
@@ -24,7 +22,7 @@ const SEO = () => {
       <meta property="og:description" content="Front-End Developer" />
       <meta
         property="og:image"
-        content="https://anil.pages.dev/assets/og-thumb.png"
+        content="https://cumon.pages.dev/assets/og-thumb.png"
       />
       <meta property="og:image:alt" content="Anil Seervi" />
       <meta property="og:image:height" content="1080" />
@@ -36,9 +34,7 @@ const SEO = () => {
       />
       <meta property="og:title" content="Anil Seervi" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://anil.pages.dev/" />
-    </Head>
+      <meta property="og:url" content="https://cumon.pages.dev/" />
+    </head>
   );
-};
-
-export default SEO;
+}

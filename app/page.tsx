@@ -1,16 +1,11 @@
-import type { NextPage } from "next";
 import Logo from "../components/Logo";
 import MainCont from "../components/MainCont";
-import SEO from "../components/SEO";
 
-const Home: NextPage = () => {
+export default function HomePage() {
   return (
     <>
-      <SEO />
       <MainCont />
       <Logo />
     </>
   );
-};
-
-export default Home;
+}
